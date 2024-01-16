@@ -53,6 +53,7 @@ public class Dog {
    * @return the dog's age.
    */
   public int getAge() {
+
     return this.age;
   }
 
@@ -62,6 +63,7 @@ public class Dog {
    * @return The dog's weight in kilograms.
    */
   public double getWeight() {
+
     return this.weight;
   }
 
@@ -71,6 +73,7 @@ public class Dog {
    * @return an enum with one of the options for dog size.
    */
   public Size getSize() {
+
     return this.size;
   }
 
@@ -80,6 +83,7 @@ public class Dog {
    * @return true if the dog is vaccinated; false otherwise.
    */
   public boolean isVaccinated() {
+
     return this.vaccinated;
   }
 

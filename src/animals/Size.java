@@ -15,11 +15,13 @@ public enum Size {
    * @param display the String that will be displayed.
    */
   Size(String display) {
+
     this.display = display;
   }
 
   @Override
   public String toString() {
+
     return this.display;
   }
 }
