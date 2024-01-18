@@ -1,4 +1,5 @@
 import animals.Dog;
+import animals.Cat;
 import animals.Size;
 
 /** In this project, we will create a few Dog objects.
@@ -17,6 +18,8 @@ public class Main {
     Dog lucky = new Dog("Lucky", 5, 13.455, Size.MEDIUM, false);
     Dog groucho = new Dog("Groucho", 3, 82.5, Size.LARGE, false);
 
+
+
     // Print the toString() of the Dog objects.
     System.out.println("\nInformation about Ichiro:");
     System.out.println(ichiro);
@@ -26,6 +29,9 @@ public class Main {
 
     System.out.println("\nInformation about Groucho:");
     System.out.println(groucho);
+
+    Cat sparkles = new Cat();
+    System.out.println(sparkles);
 
     // make some cats and print out their information
   }

@@ -105,9 +105,18 @@ public class Dog {
 
   @Override public String toString() {
     String str;
-    str = "Dog's name: " + getName() + "\n" + String.format("Dog's age: %d years\n", this.getAge())
-        + String.format("Dog's weight: %.2f kg\n", this.getWeight()) + "Dog's size: "
-        + this.getSize() + "\n";
+    // the name of the dog.
+    str = "Dog's name: " + getName() + "\n";
+    // add the age of the dog on the next line
+    str = str + String.format("Dog's age: %d years\n", this.getAge());
+
+    // add the weight of the dog on the next line
+    str = str + String.format("Dog's weight: %.2f kg\n", this.getWeight());
+
+    // add the size of the dog on the next line
+    str = str + "Dog's size: " + this.getSize() + "\n";
+
+    // now add the vaccination status on the last line
     if (this.isVaccinated()) {
       str = str + "Dog is vaccinated";
     } else {
