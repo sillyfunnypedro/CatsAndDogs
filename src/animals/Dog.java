@@ -6,11 +6,11 @@ package animals;
  */
 public class Dog {
 
-  public String name;
-  public int age;
-  public double weight;
-  public Size size;
-  public boolean vaccinated;
+  private final  String name;
+  private final int age;
+  private  double weight;
+  private final  Size size;
+  private boolean vaccinated;
 
   /**
    * Constructor for the class Dog.
@@ -44,6 +44,7 @@ public class Dog {
    * @return the dog's name.
    */
   public String getName() {
+
     return this.name;
   }
 
@@ -68,12 +69,20 @@ public class Dog {
   }
 
   /**
+   * Set the dog's weight in kilograms.
+   *
+   * @param weight (the dog weight)
+   */
+  public void setWeight(double weight) {
+    this.weight = weight;
+  }
+
+  /**
    * Get the dog's size.
    *
    * @return an enum with one of the options for dog size.
    */
   public Size getSize() {
-
     return this.size;
   }
 
@@ -83,8 +92,15 @@ public class Dog {
    * @return true if the dog is vaccinated; false otherwise.
    */
   public boolean isVaccinated() {
-
     return this.vaccinated;
+  }
+
+  /**
+   * set the dog's vaccination status.
+   * @param vaccinated the vaccination status.
+   */
+  public void setVaccinated(boolean vaccinated) {
+    this.vaccinated = vaccinated;
   }
 
   @Override public String toString() {

@@ -20,8 +20,8 @@ public class DogTest {
    */
   @Before
   public void setUp() {
-    ichiro = new Dog("Ichiro", 12, 10.5, Size.SMALL, true);
-    lucky = new Dog("Lucky", 5, 13.455, Size.MEDIUM, false);
+    this.ichiro = new Dog("Ichiro", 12, 10.5, Size.SMALL, true);
+    this.lucky = new Dog("Lucky", 5, 13.455, Size.MEDIUM, false);
   }
 
   /**
@@ -45,7 +45,7 @@ public class DogTest {
    */
   @Test
   public void testGetName() {
-    assertEquals("Ichiro", ichiro.getName());
+    assertEquals("Ichiro", this.ichiro.getName());
     assertEquals("Lucky", this.lucky.getName());
   }
 
@@ -54,7 +54,7 @@ public class DogTest {
    */
   @Test
   public void testGetAge() {
-    assertEquals(12, ichiro.getAge());
+    assertEquals(12, this.ichiro.getAge());
     assertEquals(5, this.lucky.getAge());
   }
 
@@ -63,8 +63,19 @@ public class DogTest {
    */
   @Test
   public void testGetWeight() {
-    assertEquals(10.5, ichiro.getWeight(), 0.1);
-    assertEquals(13.455, this.lucky.getWeight(), 0.1);
+    assertEquals(10.5, this.ichiro.getWeight(), 0.01);
+    assertEquals(13.455, this.lucky.getWeight(), 0.01);
+  }
+
+  /**
+   * Test setWeight().
+   */
+  @Test
+  public void testSetWeight() {
+    assertEquals(10.5, this.ichiro.getWeight(), 0.01);
+    this.ichiro.setWeight(11.5);
+    assertEquals(11.5, this.ichiro.getWeight(), 0.01);
+
   }
 
   /**
@@ -83,6 +94,16 @@ public class DogTest {
   public void testIsVaccinated() {
     assertTrue(this.ichiro.isVaccinated());
     assertFalse(this.lucky.isVaccinated());
+  }
+
+  /**
+   * test setVaccinated().
+   */
+  @Test
+  public void testSetVaccinated() {
+    assertFalse(this.lucky.isVaccinated());
+    this.lucky.setVaccinated(true);
+    assertTrue(this.lucky.isVaccinated());
   }
 
   /**
