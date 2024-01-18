@@ -26,5 +26,7 @@ public class Main {
 
     System.out.println("\nInformation about Groucho:");
     System.out.println(groucho);
+
+    // make some cats and print out their information
   }
 }
