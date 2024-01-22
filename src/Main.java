@@ -13,6 +13,11 @@ public class Main {
    * @param args command line arguments.
    */
   public static void main(String[] args) {
+    try {
+      Dog negativeAgeDog = new Dog("Negative Age Dog", -1, 10.5, Size.SMALL, true);
+    } catch (IllegalArgumentException e) {
+      System.out.println("Negative age dog not created");
+    }
     // Create a few Dog objects.
     Dog ichiro = new Dog("Ichiro", 12, 10.5, Size.SMALL, true);
     Dog lucky = new Dog("Lucky", 5, 13.455, Size.MEDIUM, false);
